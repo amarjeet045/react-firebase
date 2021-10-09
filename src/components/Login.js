@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Card, Button, Form, Alert } from "react-bootstrap";
+import { Card, Button, Form, Alert,Modal } from "react-bootstrap";
 import { Link ,useHistory} from "react-router-dom";
 import { useAuth } from "../contexts/AuthContexts";
 export default function Login() {
@@ -65,10 +65,30 @@ export default function Login() {
             </Form>
             <div className="signupBottomText">
               Need an Account ? <Link to="/signup">Sign Up</Link>
+              <p style={{textAlign:"center"}}>Forgot Password</p>
             </div>
           </Card.Body>
         </Card>
       </div>
+      <Modal  >
+        <Modal.Header closeButton>
+          <Modal.Title>Reset Password</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form>
+            <Form.Group id="name">
+              <Form.Label>Email</Form.Label>
+              <Form.Control type="text"  required></Form.Control>
+            </Form.Group>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary">
+            Create
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
+    
   );
 }

@@ -21,10 +21,18 @@ export default function AuthProvider({ children }) {
   }
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(async(user) => {
+      if(user)
+      {
       const tokens = await user.getIdToken();
       setToken(tokens)
       setCurrentUser(user);
       setLoading(false);
+      }
+      else{
+        setToken("")
+      setCurrentUser(user);
+      setLoading(false);
+      }
     });
 
     return unsubscribe;
