@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useAuth } from "./AuthContexts";
 export default function QrContext() {
-  const [users, usersSet] = useState([]);
+  const [users, usersSet] = useState({});
   const { token } = useAuth();
   useEffect(() => {
     async function fetchUsers() {

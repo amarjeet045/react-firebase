@@ -58,7 +58,7 @@ export default function Qr() {
       </Card>
     </Col>
     <Col xs={3} md={3}>
-      <Card>
+      <Card >
     <Card.Body>
         <img alt="checklist" src="https://photos.growthfile.com/file/static-page-images/Booking.svg?timestamp=1632738391375" />
         <p className="serviceText">Booking</p>

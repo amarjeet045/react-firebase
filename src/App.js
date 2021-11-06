@@ -11,6 +11,8 @@ import Qr from "./components/Qr";
 import Checklist from "./components/Checklist";
 import Booking from "./components/Booking";
 import Visitor from "./components/Visitor";
+import Order from "./components/Order";
+import IndentOrder from "./components/IndentOrder";
 function App() {
   return (
     <Router>
@@ -25,6 +27,8 @@ function App() {
           <Route path ="/checklist" component = {Checklist}></Route>
           <Route path = "/booking" component = {Booking} ></Route>
           <Route path = "/visitor" component ={Visitor}></Route>
+          <Route path ="/order" component = {Order} ></Route>
+          <Route path = "/indentorder" component = {IndentOrder}></Route>
 
         </Switch>
       </AuthProvider>
